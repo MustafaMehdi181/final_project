@@ -1,0 +1,78 @@
+<h1 style="text-align: center;"> Welcome to the Trivia Quiz Setup</h1>
+<p style="font-size: 20px ; text-align: center;">Dear User, Welcome to the Trivia Quiz. Please Fill in all the fields
+    below to load
+    your quiz and put your general knowledge to test!!!
+</p>
+
+<br>
+
+<form action method="post" class="forms-api">
+    <h2 class="form-signing-heading">Set Up Your Quiz Here: </h2>
+
+    <label for="trivia amount" style="font-weight: bold; font-size: 18px;"> Select Number of Questions</label>
+    <br>
+    <input type="number" name="trivia amount" id="triviaamount" class="form-control" min="1" max="50" [(ngModel)]="triviaAmount" value="15"
+        style="width : 275px">
+    <br>
+    <br>
+
+    <label for="trivia category" style="font-weight: bold; font-size: 18px;">Select Category</label>
+    <br>
+    <select name="trivia category" id="triviacategory" class="form-control" [(ngModel)]="triviaCategory">
+        <option value="any"> Any Category</option>
+        <option value="9"> General Knowledge</option>
+        <option value="10"> Entertainment: Books</option>
+        <option value="11"> Entertainment: Film</option>
+        <option value="12"> Entertainment: Music</option>
+        <option value="13"> Entertainment: Musicals and Theatres</option>
+        <option value="14"> Entertainment: Television</option>
+        <option value="15"> Entertainment: Video Games</option>
+        <option value="16"> Entertainment: Board Games</option>
+        <option value="17"> Science and Nature</option>
+        <option value="18"> Science: Comuters</option>
+        <option value="19"> Science: Mathematics</option>
+        <option value="20"> Mythology</option>
+        <option value="21"> Sports </option>
+        <option value="22"> Geography</option>
+        <option value="23"> History</option>
+        <option value="24"> Politics </option>
+        <option value="25"> Art</option>
+        <option value="26"> Celebrities</option>
+        <option value="27"> Animals</option>
+        <option value="28"> Vehicles</option>
+        <option value="29"> Entertainment: Comics</option>
+        <option value="30"> Science: Gadgets</option>
+        <option value="31"> Entertainment: Japanese Anime and Manga</option>
+        <option value="32"> Entertainment: Cartoon and Animations</option>
+    </select>
+    <br>
+    <br>
+
+    <label for="trivia difficulty" style="font-weight: bold; font-size: 18px;">Select Difficulty</label>
+    <br>
+    <select name="trivia difficulty" id="trivia difficulty" class="form-control" [(ngModel)]="triviaDifficulty" >
+        <option value="any">Any Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>    
+    </select>
+    <br>
+    <br>
+
+    <label for="trivia type" style="font-weight: bold; font-size: 18px;">Select the Type of Questions</label>
+    <br>
+    <select name="trivia type" id="trivia type" class="form-control" [(ngModel)]="triviaType">
+        <option value="any">Any Difficulty</option>
+        <option value="multiple">MCQs</option>
+        <option value="boolean">True/False</option>    
+    </select>
+    <br>
+    <br>
+
+    <button style="text-align:center ;" (click)="Submit()"> Submit and Start Quiz </button>
+    
+    
+</form>
+
+
+
